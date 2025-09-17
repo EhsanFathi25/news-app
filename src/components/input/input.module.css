@@ -1,0 +1,17 @@
+.articleInput{
+    text-align: right;
+}
+
+.articleInput label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.articleInput input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #9e9d9d;
+    border-radius: 2px;
+    text-align: right;
+    margin-bottom: 20px;
+}

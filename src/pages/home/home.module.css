@@ -1,0 +1,17 @@
+.title{
+    text-align: right;
+    margin-top: 60px;
+    margin-bottom: 30px ;
+    font-size: 20px;
+}
+
+.articelWarapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+
+}
+.articelWarapper a{
+    width: 23%;
+}

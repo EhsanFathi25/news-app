@@ -1,0 +1,23 @@
+.articels {
+  height: 300px;
+  margin-bottom: 30px;
+  box-shadow: 0px 3px 5px #ddd;
+}
+
+.articels img {
+  width: 100%;
+}
+
+.articels h4 {
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding-right: 10px;
+}
+
+.articels p {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 12px;
+  color: dimgrey;
+}

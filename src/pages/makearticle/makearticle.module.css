@@ -1,0 +1,22 @@
+
+.MakeArticle h1{
+    text-align: right;
+    margin: 40px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.wrapperButton{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.wrapperButton button{
+    width: 60px;
+    padding: 5px;
+    border: none;
+    background-color: #61aff4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

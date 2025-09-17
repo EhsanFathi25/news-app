@@ -1,0 +1,11 @@
+.TextArea label{
+    display: block;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.TextArea textarea{
+    width: 100%;
+    min-height: 200px;
+    text-align: right;
+}
