@@ -1,22 +1,42 @@
 
-.MakeArticle h1{
+.MakeArticle {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+  }
+  
+
+
+.MakeArticle h1 {
     text-align: right;
     margin: 40px 0;
-    font-size: 24px;
-    font-weight: 500;
-}
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #61aff4;
+    padding-bottom: 10px;
+  }
 
 .wrapperButton{
     text-align: right;
     margin-top: 10px;
 }
 
-.wrapperButton button{
-    width: 60px;
-    padding: 5px;
+.wrapperButton button {
+    width: 80px;
+    padding: 8px;
     border: none;
+    border-radius: 6px;
     background-color: #61aff4;
     color: white;
     font-weight: bold;
     cursor: pointer;
-}
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .wrapperButton button:hover {
+    background-color: #4a97d6;
+  }
+  .formField {
+    margin-bottom: 20px;
+  }

@@ -31,19 +31,38 @@ function MakeArticle() {
         }))
     }
 
-    const handelButton = () => {
-        axios.post("http://localhost:8001/articels", {
-            id: 6,
-            imgUrl: articleMake.img ,
+    // const handelButton = () => {
+    //     axios.post("http://localhost:8001/articels", {
+    //         id: Date.now(),
+    //         imgUrl: articleMake.img ,
+    //         title: articleMake.title,
+    //         readingTime: articleMake.readingTime,
+    //         date: articleMake.date,
+    //         othor: articleMake.othar,
+    //         content: articleMake.text,
+            
+
+    //     })
+    // }
+
+    const handelButton = async () => {
+    
+        try {
+          const response = await axios.post("http://localhost:8001/articels", {
+            id: Date.now(),
+            imgUrl: articleMake.img,
             title: articleMake.title,
             readingTime: articleMake.readingTime,
             date: articleMake.date,
-            othor: articleMake.othar,
+            author: articleMake.author,
             content: articleMake.text,
-            
-
-        })
-    }
+          });
+          alert("مقاله با موفقیت ثبت شد!");
+        } catch (error) {
+          alert("خطا در ثبت مقاله");
+          console.error(error);
+        }
+      };
 
     console.log(articleMake);
 
@@ -54,12 +73,12 @@ function MakeArticle() {
             <div className={styled.MakeArticle}>
                 <div className="container">
                     <h1>ساخت مقاله</h1>
-                    <Input label="عنوان" name="title" handelChange={handelChangePage} />
-                    <Input label="تاریخ" name="date" handelChange={handelChangePage} />
-                    <Input label="نویسنده" name="othar" handelChange={handelChangePage} />
-                    <Input label="مدت زمان خواندن" name="readingTime" handelChange={handelChangePage} />
-                    <Input label="آدرس عکس(URL)" name="img" handelChange={handelChangePage} />
-                    <TextArea label="متن" handelChange={handelChangeTextArea} />
+                    <Input className={styled.formField} label="عنوان" name="title" handelChange={handelChangePage} />
+                    <Input className={styled.formField} label="تاریخ" name="date" handelChange={handelChangePage} />
+                    <Input className={styled.formField} label="نویسنده" name="othar" handelChange={handelChangePage} />
+                    <Input className={styled.formField} label="مدت زمان خواندن" name="readingTime" handelChange={handelChangePage} />
+                    <Input className={styled.formField} label="آدرس عکس(URL)" name="img" handelChange={handelChangePage} />
+                    <TextArea className={styled.formField} label="متن" handelChange={handelChangeTextArea} />
                     <div className={styled.wrapperButton}>
                         <button onClick={handelButton}>تایید</button>
                     </div>
@@ -68,7 +87,7 @@ function MakeArticle() {
             <Footer />
         </>
 
-    )
-}
+    )}
+
 
 export default MakeArticle;
