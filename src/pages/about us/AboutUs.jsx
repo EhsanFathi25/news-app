@@ -6,7 +6,7 @@ import picture from "./../../assets/img/unnamed.png";
 function About() {
     return (
         <div>
-            <Navbar title="دی جی شاپ" />
+            <Navbar title="خبر" />
             <div className={styled.aboutWrapper}>
                 <div className="container">
 

@@ -12,30 +12,32 @@ function Home() {
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
-        setIsLoading(true)
-        axios.get("http://localhost:8001/articels")
-            .then((result) => {
-                setArticels(result.data)
-                setIsLoading(false)
-            })
-            .catch((error) => {
-                console.log(error);
-                setIsLoading(false)
-            });
-    }, [])
+        const fetchArticles = async () => {
+          setIsLoading(true);
+          try {
+            const result = await axios.get("http://localhost:8001/articels");
+            setArticels(result.data);
+          } catch (error) {
+            console.error("خطا در دریافت مقالات:", error);
+          } finally {
+            setIsLoading(false);
+          }
+        };
+      
+        fetchArticles();
+      }, []);
 
 
     return (
         <div>
-            <Navbar title="دی جی شاپ" />
+            <Navbar title="خبر" />
             <div className="container">
-                
+
                 <h2 className={styled.title}>
                     مقالات
                 </h2>
                 {isLoading ? <Spinner /> : <div className={styled.articelWarapper}>
                     {articels.map((data) => (
-
                         <Link to={`/article/${data.id}`}>
                             <Articels key={data.id} articel={data} />
                         </Link>
@@ -43,7 +45,7 @@ function Home() {
                     ))}
                 </div>}
 
-                
+
             </div>
             <Footer />
         </div>

@@ -28,7 +28,7 @@ function Article() {
 
     return (
         <div>
-            <Navbar title="دی جی شاپ" />
+            <Navbar title="خبر" />
 
             <div className={styled.articleWrapper}>
                 <div className="container">

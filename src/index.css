@@ -37,3 +37,25 @@ a{
   text-decoration: none;
   color: #333;
 }
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+
+
+@media (max-width: 870px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
