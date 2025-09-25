@@ -9,21 +9,34 @@ import Footer from "../../components/footer/Footer";
 function Article() {
     const [article, setArticle] = useState({})
     const params = useParams()
-    const [isLoding, setIsLoding] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
 
     useEffect(() => {
-        setIsLoding(true)
+        setIsLoading(true)
         axios.get(`http://localhost:8001/articels/${params.id}`)
             .then((result) => {
                 setArticle(result.data)
-                setIsLoding(false)
+                setIsLoading(false)
             })
             .catch((error) => {
                 console.log(error);
-                setIsLoding(false)
+                setIsLoading(false)
             });
     }, [])
+
+    const [likes, setLikes] = useState(0);
+    const [liked, setLiked] = useState(false);
+
+    const handleLike = () => {
+        if (!liked) {
+            setLikes(likes + 1);
+            setLiked(true);
+        } else {
+            setLikes(likes - 1);
+            setLiked(false);
+        }
+    };
 
 
     return (
@@ -32,14 +45,20 @@ function Article() {
 
             <div className={styled.articleWrapper}>
                 <div className="container">
-                    {isLoding ? <Spinner /> :
+                    {isLoading ? <Spinner /> :
                         <><h1>{article.title}</h1>
                             <div className={styled.articleInfo}>
                                 <span>تاریخ: {article.date}</span>
                                 <span>نویسنده: {article.othor} </span>
                                 <span>زمان خواندن {article.readingTime} دقیقه</span>
-                            </div><img src={article.imgUrl} alt="" />
+                            </div><img src={article.imgUrl} alt={article.title} />
+                            <div className={styled.likeSection}>
+                                <button onClick={handleLike} className={liked ? styled.liked : ""}>
+                                    ❤️ {likes}
+                                </button>
+                            </div>
                             <p>{article.content}</p></>}
+
 
                 </div>
             </div>

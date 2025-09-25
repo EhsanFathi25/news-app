@@ -72,7 +72,7 @@ function MakeArticle() {
             <Navbar title="خبر" />
             <div className={styled.MakeArticle}>
                 <div className="container">
-                    <h1>خبر جدید</h1>
+                    <h1>افزودن خبر جدید</h1>
                     <Input className={styled.formField} label="عنوان" name="title" handelChange={handelChangePage} />
                     <Input className={styled.formField} label="تاریخ" name="date" handelChange={handelChangePage} />
                     <Input className={styled.formField} label="نویسنده" name="othar" handelChange={handelChangePage} />

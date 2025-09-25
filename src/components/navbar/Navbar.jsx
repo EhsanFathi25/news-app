@@ -19,7 +19,7 @@ function Navbar({ title }) {
          
           <ul className={`${styled.navLinks} ${isOpen ? styled.show : ""}`}>
             <li><Link to="/">لیست خبرها</Link></li>
-            <li><Link to="/make-article">خبرهای جدید</Link></li>
+            <li><Link to="/make-article">افزودن خبر</Link></li>
             <li><Link to="/about">درباره ما</Link></li>
           </ul>
         </div>
