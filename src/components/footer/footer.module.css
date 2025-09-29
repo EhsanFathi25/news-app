@@ -1,9 +1,115 @@
-.footer{
+.footer {
     background-color: rgb(65, 65, 65);
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #fff;
+    padding: 40px 0;
     margin-top: 200px;
-}
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footerLayout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: rgb(65, 65, 65);
+    color: #fff;
+    border-top: 1px solid #777;
+  }
+  
+  .mapWrapper {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .infoWrapper {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    text-align: right;
+  }
+  
+  .infoWrapper p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .socials a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .socials a:hover {
+    color: #61aff4;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .contactForm button {
+    background-color: #61aff4;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactForm button:hover {
+    background-color: #4a97d6;
+  }
+
+
+  @media (max-width: 768px) {
+    .footerLayout {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .mapWrapper,
+    .infoWrapper {
+      max-width: 100%;
+      align-items: center;
+    }
+  
+    .infoWrapper {
+      text-align: center;
+    }
+  
+    .contactForm {
+      max-width: 100%;
+    }
+  }

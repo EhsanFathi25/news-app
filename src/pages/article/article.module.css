@@ -1,82 +1,143 @@
 .articleWrapper {
-    text-align: center;
-    padding-top: 60px; /* چون نوبار فیکس شده */
+  text-align: center;
+  padding-top: 60px;
+}
+
+.articleWrapper h1 {
+  text-align: right;
+  margin: 20px 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+.articleWrapper img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px 0 10px 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.articleWrapper p {
+  text-align: right;
+  color: #555;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.articleInfo {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+.actionBar {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.actionBar button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.actionBar button:hover {
+  color: #e63946;
+}
+
+.likeSection {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 110px;
+}
+
+.likeSection button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.likeSection button:hover {
+  color: #e63946;
+}
+
+.liked {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.shareButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.shareButtons a,
+.shareButtons button {
+  background-color: transparent;
+  color: rgb(97, 97, 97);
+  border: none;
+  padding: 5px;
+  border-radius: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shareButtons a:hover,
+.shareButtons button:hover {
+  background-color: #4a97d6;
+}
+
+@media (max-width: 768px) {
+  .likeSection {
+    flex-direction: column;
+    align-items: flex-end;
   }
-  
-  .articleWrapper h1 {
-    text-align: right;
-    margin: 20px 0;
-    font-size: 28px;
-    font-weight: 600;
-    color: #333;
+
+  .shareButtons {
+    justify-content: flex-end;
   }
-  
-  .articleWrapper img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .articleWrapper p {
-    text-align: right;
-    color: #555;
-    line-height: 1.8;
+  .shareButtons a,
+  .shareButtons button {
     font-size: 16px;
   }
-  
-  .articleInfo {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-    color: #777;
+
+  .articleWrapper h1 {
+    font-size: 20px;
+  }
+
+  .articleWrapper p {
     font-size: 14px;
   }
-  
-  .likeSection {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .likeSection button {
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    color: #555;
-    transition: color 0.3s ease;
-  }
-  
-  .likeSection button:hover {
-    color: #e63946;
-  }
-  
-  .liked {
-    color: #e63946;
-    font-weight: bold;
+
+  .articleInfo {
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 10px;
   }
 
-
-  @media (max-width: 768px) {
-    .articleWrapper h1 {
-      font-size: 22px;
-    }
-  
-    .articleWrapper img {
-      width: 100%;
-    }
-  
-    .articleWrapper p {
-      font-size: 14px;
-    }
-  
-    .articleInfo {
-      flex-direction: column;
-      align-items: flex-end;
-    }
+  .articleWrapper img {
+    width: 100%;
+    max-width: 100%;
   }
+}
